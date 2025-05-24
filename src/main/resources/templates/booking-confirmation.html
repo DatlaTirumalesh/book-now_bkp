@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        .heading {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .details {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .details th, .details td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .details th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/150?text=AERO" alt="Aero Logo">
+        </div>
+        <h2 class="heading">Booking Confirmation</h2>
+
+        <table class="details">
+            <tr>
+                <th>Ticket Number</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Seat Number</th>
+                <th>Date</th>
+                <th>Time</th>
+				<th>Gender</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Bus Number</th>
+                <th>Driver Contact</th>
+            </tr>
+            <tr>
+                <td th:text="${ticketNum}"></td>
+                <td th:text="${name}"></td>
+                <td th:text="${email}"></td>
+                <td th:text="${phoneNum}"></td>
+                <td th:text="${seatNum}"></td>
+                <td th:text="${date}"></td>
+                <td th:text="${time}"></td>
+				<td th:text="${gender}"></td>"
+                <td th:text="${fromBus}"></td>
+                <td th:text="${toBus}"></td>
+                <td th:text="${busNum}"></td>
+                <td th:text="${driverNum}"></td>
+            </tr>
+        </table>
+
+        <p class="footer">Thank you for choosing Aero. Have a safe journey!</p>
+    </div>
+
+</body>
+</html>
